@@ -1,19 +1,25 @@
-# Sentiment Analysis Web App
+# 📊 Sentiment Analysis Web App
 
-A Flask web app that analyzes sentiment (positive, negative, neutral) of text reviews using Hugging Face Transformers. Stores reviews in MongoDB and generates a sentiment distribution report.
+A Flask-based web application that analyzes text sentiment (Positive, Negative, Neutral) using Hugging Face Transformers.  
+The app stores reviews in **MongoDB** and generates a sentiment distribution chart with **Matplotlib**.
 
-## Features
-- Input text and get sentiment prediction
-- Save reviews in MongoDB
-- Generate sentiment distribution chart
-- Clear all stored reviews
+---
 
-## Requirements
-- Python 3.8+
-- Flask
-- Transformers
-- PyMongo
-- Matplotlib
-- Other dependencies listed in requirements.txt
+## 🚀 Features
+- ✅ Input a review and get sentiment prediction (Positive / Negative / Neutral)  
+- ✅ Save results in MongoDB automatically  
+- ✅ Generate a sentiment distribution pie chart  
+- ✅ Clear stored reviews from the database  
 
+---
 
+## 🛠️ Tech Stack
+- **Backend:** Flask (Python)  
+- **NLP Model:** Hugging Face `cardiffnlp/twitter-roberta-base-sentiment`  
+- **Database:** MongoDB  
+- **Visualization:** Matplotlib  
+- **Frontend:** HTML, CSS (templates + static folder)  
+
+---
+
+## 📂 Project Structure
