@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis Result</h1>
+
+        <div class="result-card 
+            {% if sentiment.lower() == 'positive' %}positive{% endif %}
+            {% if sentiment.lower() == 'negative' %}negative{% endif %}
+            {% if sentiment.lower() == 'neutral' %}neutral{% endif %}
+        ">
+            {{ sentiment }} (Confidence: {{ "%.2f"|format(score) }})
+        </div>
+
+        <p><strong>Review:</strong> "{{ review }}"</p>
+
+        <a href="/">Analyze another review</a> |
+        <a href="/report">View Sentiment Report</a>
+    </div>
+</body>
+</html>
