@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container card">
+        <h2>📊 Sentiment Distribution</h2>
+
+        <!-- Pie Chart -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            {% if chart %}
+    <img src="data:image/png;base64,{{ chart }}" alt="Sentiment Chart" class="chart-img">
+{% else %}
+    <p style="text-align:center; color:gray;">⚠ No data available yet. Please analyze some reviews first.</p>
+{% endif %}
+        </div>
+
+        <!-- Buttons -->
+        <div style="display: flex; justify-content: space-between;">
+            <a href="/" class="btn">⬅️ Back Home</a>
+
+            <form action="/clear" method="POST">
+                <button type="submit" class="btn btn-danger">🗑️ Clear All Data</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
