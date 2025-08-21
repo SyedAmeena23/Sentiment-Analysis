@@ -23,3 +23,10 @@ The app stores reviews in **MongoDB** and generates a sentiment distribution cha
 ---
 
 ## 📂 Project Structure
+SENTIMENT ANALYSIS
+├── 📁 static/ # CSS, images
+├── 📁 templates/ # HTML files (index.html, result.html, report.html, clear.html)
+├── app.py # Flask application
+├── requirements.txt # Python dependencies
+├── .gitignore # Ignore venv, cache files
+└── README.md # Project documentation
